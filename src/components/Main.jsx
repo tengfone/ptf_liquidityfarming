@@ -14,8 +14,8 @@ class Main extends Component {
             </thead>
             <tbody>
                 <tr>
-                <td>{window.web3.utils.fromWei(this.props.stakingBalance, 'Ether')} mDAI</td>
-                <td>{window.web3.utils.fromWei(this.props.tfTokenBalance, 'Ether')} PTF</td>
+                <td>{window.web3.utils.fromWei(this.props.stakingBalance, 'ether')} mDAI</td>
+                <td>{window.web3.utils.fromWei(this.props.tfTokenBalance, 'ether')} PTF</td>
                 </tr>
             </tbody>
             </table>
@@ -28,13 +28,13 @@ class Main extends Component {
                 event.preventDefault()
                 let amount
                 amount = this.input.value.toString()
-                amount = window.web3.utils.toWei(amount, 'Ether')
+                amount = window.web3.utils.toWei(amount, 'ether')
                 this.props.stakeTokens(amount)
               }}>
               <div>
                 <label className="float-left"><b>Stake Tokens</b></label>
                 <span className="float-right text-muted">
-                  Balance: {window.web3.utils.fromWei(this.props.daiTokenBalance, 'Ether')}
+                  Balance: {window.web3.utils.fromWei(this.props.daiTokenBalance, 'ether')}
                 </span>
               </div>
               <div className="input-group mb-4">
